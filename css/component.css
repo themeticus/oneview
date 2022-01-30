@@ -39,7 +39,7 @@ html.js,
 }
 
 .dragslider h2 {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Anton', serif;
 	font-size: 8em;
 	font-weight: normal;
 	margin: 0 auto;
@@ -262,7 +262,7 @@ button.content-switch {
 	font-weight: 400;
 	outline: none;
 	z-index: 1000;
-	opacity: 0.7;
+	opacity: 1;
 	-webkit-transition: -webkit-transform 0.6s cubic-bezier(.7,0,.3,1), opacity 0.3s, color 0.3s, border-color 0.3s;
 	transition: transform 0.6s cubic-bezier(.7,0,.3,1), opacity 0.3s, color 0.3s, border-color 0.3s;
 }
@@ -284,10 +284,11 @@ button.content-switch::before {
 	height: 100%;
 	left: 0;
 	text-indent: 0;
-	font-size: 1.5em;
-	line-height: 0.75;
+	font-size: 3em;
+	/* line-height: 0.75; */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	top: 0px;
 }
 
 .show-content .current button.content-switch {
@@ -295,6 +296,10 @@ button.content-switch::before {
 	color: #c5d3d6;
 	-webkit-transform: translate3d(-50%,100%,0);
 	transform: translate3d(-50%,100%,0);
+	width: calc(100% - 2em) !important;
+    background-color: #000;
+    margin: -40px 0 0 0;
+	transition: background-color 3s ease;
 }
 
 .show-content .current button.content-switch::before {
@@ -341,6 +346,7 @@ button.content-switch::before {
 	height: 100%;
 	-webkit-transition: none;
 	transition: none;
+	background: black !important;
 }
 
 .pages .content h2 {
