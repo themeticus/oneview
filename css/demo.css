@@ -75,8 +75,8 @@ a:hover, a:focus {
 
 .no-js .overlay, 
 .overlay.hide {
-	-webkit-transition: opacity 3.3s, visibility 3.3s;
-	transition: opacity 3.3s, visibility 3.3s;
+	-webkit-transition: opacity 0.3s, visibility 0.3s;
+	transition: opacity 0.3s, visibility 0.3s;
 	visibility: hidden;
 }
 
