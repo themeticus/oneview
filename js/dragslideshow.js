@@ -67,8 +67,8 @@
 	 * DragSlideshow options
 	 */
 	DragSlideshow.prototype.options = {
-		perspective : '1200',
-		slideshowRatio : 0.3, // between: 0,1
+		perspective : '2400',
+		slideshowRatio : 0.5, // between: 0,1
 		onToggle : function() { return false; },
 		onToggleContent : function() { return false; },
 		onToggleContentComplete : function() { return false; }
