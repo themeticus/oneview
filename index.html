@@ -42,7 +42,7 @@ background: linear-gradient(to right, #243B55, #141E30);
 			}
 		  </style>
 		  <script>
-
+			  let thePrestige = 'https://vk.com/video_ext.php?oid=-102904422&id=456239797&hash=033dae6191a867db&wallpost=false&name=beep'
 		  </script>
 	</head>
 	<body>
@@ -130,27 +130,32 @@ background: linear-gradient(to right, #243B55, #141E30);
 				<!-- Content section -->
 				<section class="pages">
 
-					<div class="content" data-content="content-1">
 
-				
+					<div class="content" data-content="content-1" id="onePlayer">
+						<!-- <div style="width:100px; height:100px; background-color:red; position:absolute; top:0; left:0; z-index:999999999999">beeeeeeep</div> -->
 						<iframe  width="100%"
 							height="100%" 
-							src="https://vk.com/video_ext.php?oid=-44055899&id=168346213&hash=1921f08867a2d2a6&t=12s?nofrm=1" 
+							src="https://vk.com/video_ext.php?oid=-44055899&id=168346213&hash=1921f08867a2d2a6" 
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  
 							frameborder="0" 
 							allowfullscreen="" 
 							class="onePlayer"
-							id="onePlayer"
+							id="onePlayeriFrame"
 							scrolling="no">
 						</iframe>
-
-
-			
-
 					</div>
 					<div class="content" data-content="content-2">
-				
-
+						<iframe  width="100%"
+							height="100%" 
+							src="https://vk.com/video_ext.php?oid=-73707971&id=456239828&hash=b4ef9416c75eb852" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  
+							frameborder="0" 
+							allowfullscreen="" 
+							class="onePlayer"
+							id="onePlayeriFrame"
+							scrolling="no">
+						</iframe>						
+						
 					</div>		
 					<div class="content" data-content="content-3">
 
@@ -252,14 +257,14 @@ background: linear-gradient(to right, #243B55, #141E30);
 					function(e) { 
 						setVideo();
 						changeStuff();
-						console.log(document.querySelector('.current').dataset.src)
+						// console.log(document.querySelector('.current').dataset.src)
 					}
 				)))
 
 				function setVideo() {
 					// const currentSrc = this.parentElement.dataset.src;
 					// console.log(this, currentSrc)
-					console.log('beep');
+					// console.log('beep');
 				}
 
 				function changeStuff() {
@@ -269,6 +274,30 @@ background: linear-gradient(to right, #243B55, #141E30);
 				}
 				//   document.querySelectorAll('.videoplayer_title_link')[0].innerText='Apollo 13';
 
+				function setCookie(name,value,days) {
+					var expires = "";
+					if (days) {
+						var date = new Date();
+						date.setTime(date.getTime() + (days*24*60*60*1000));
+						expires = "; expires=" + date.toUTCString();
+					}
+				document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+				}
+				function getCookie(name) {
+					var nameEQ = name + "=";
+					var ca = document.cookie.split(';');
+					for(var i=0;i < ca.length;i++) {
+						var c = ca[i];
+						while (c.charAt(0)==' ') c = c.substring(1,c.length);
+						if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+					}
+					return null;
+				}
+
+				setCookie("tq","tq",30); //set "user_email" cookie, expires in 30 days
+				var userEmail=getCookie("tq");//"bobthegreat@gmail.com"
+
+				setTimeout(() => { console.clear() }, 3000);
 
 			}());
 		</script>
