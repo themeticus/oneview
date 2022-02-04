@@ -5,9 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>WeFlix by OneLove</title>
-		<meta name="description" content="Draggable Dual-View Slideshow: A Slideshow with two views and content area" />
-		<meta name="keywords" content="draggable, slideshow, fullscreen, carousel, views, zoomed, 3d transform, perspective, dragdealer" />
-		<meta name="author" content="Codrops" />
+		<meta name="description" content="oneview" />
+		<meta name="keywords" content="oneview" />
+		<meta name="author" content="themeticus" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href='https://fonts.googleapis.com/css?family=Anton:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
@@ -28,7 +28,6 @@ background: linear-gradient(to right, #243B55, #141E30);
 			}
 
 			#slideshow {
-				/* background-image: url('https://wallpaperaccess.com/full/3014121.jpg'); */
 				background: #141E30 !important; 
 background: -webkit-linear-gradient(to right, #243B55, #141E30);  
 background: linear-gradient(to right, #243B55, #141E30); 
@@ -41,9 +40,7 @@ background: linear-gradient(to right, #243B55, #141E30);
 
 			}
 		  </style>
-		  <script>
-			  let thePrestige = 'https://vk.com/video_ext.php?oid=-102904422&id=456239797&hash=033dae6191a867db&wallpost=false&name=beep'
-		  </script>
+
 	</head>
 	<body>
 		<div class="container" >
@@ -132,7 +129,6 @@ background: linear-gradient(to right, #243B55, #141E30);
 
 
 					<div class="content" data-content="content-1" id="onePlayer">
-						<!-- <div style="width:100px; height:100px; background-color:red; position:absolute; top:0; left:0; z-index:999999999999">beeeeeeep</div> -->
 						<iframe  width="100%"
 							height="100%" 
 							src="https://vk.com/video_ext.php?oid=-44055899&id=168346213&hash=1921f08867a2d2a6" 
@@ -273,29 +269,6 @@ background: linear-gradient(to right, #243B55, #141E30);
 					// console.log(iframeWindow, iframeDocument)
 				}
 				//   document.querySelectorAll('.videoplayer_title_link')[0].innerText='Apollo 13';
-
-				function setCookie(name,value,days) {
-					var expires = "";
-					if (days) {
-						var date = new Date();
-						date.setTime(date.getTime() + (days*24*60*60*1000));
-						expires = "; expires=" + date.toUTCString();
-					}
-				document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-				}
-				function getCookie(name) {
-					var nameEQ = name + "=";
-					var ca = document.cookie.split(';');
-					for(var i=0;i < ca.length;i++) {
-						var c = ca[i];
-						while (c.charAt(0)==' ') c = c.substring(1,c.length);
-						if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-					}
-					return null;
-				}
-
-				setCookie("tq","tq",30); //set "user_email" cookie, expires in 30 days
-				var userEmail=getCookie("tq");//"bobthegreat@gmail.com"
 
 				setTimeout(() => { console.clear() }, 10000);
 
